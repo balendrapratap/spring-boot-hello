@@ -1,0 +1,18 @@
+{
+    "family": "aws-task-1",
+    "containerDefinitions": [
+        {
+            "image": "405545836457.dkr.ecr.us-east-1.amazonaws.com/springboot-ecr:latest",
+            "name": "aws-task-1",
+            "cpu": 10,
+            "memory": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
