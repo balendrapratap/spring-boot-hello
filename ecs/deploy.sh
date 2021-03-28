@@ -17,10 +17,10 @@ SERVICES=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUST
 
 
 #Create or update service
-if [ "$SERVICES" == "" ]; then
+if [[ "$SERVICES" == "" ]]; then
   echo "entered existing service"
   DESIRED_COUNT=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUSTER} --region ${REGION} | jq .services[].desiredCount`
-  if [ ${DESIRED_COUNT} = "0" ]; then
+  if [[ ${DESIRED_COUNT} = "0" ]]; then
     DESIRED_COUNT="1"
   fi
   aws ecs update-service --cluster ${CLUSTER} --region ${REGION} --service ${SERVICE_NAME} --task-definition ${TASK_FAMILY}:${REVISION} --desired-count ${DESIRED_COUNT} --deployment-configuration maximumPercent=100,minimumHealthyPercent=0
