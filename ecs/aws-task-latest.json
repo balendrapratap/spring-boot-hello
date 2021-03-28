@@ -1,5 +1,5 @@
 {
-    "family": "aws-task-1",
+    "family": "aws-task-latest",
     "containerDefinitions": [
         {
             "image": "653308993752.dkr.ecr.us-west-1.amazonaws.com/springboot-ecr:latest",
@@ -10,7 +10,7 @@
             "portMappings": [
                 {
                     
-                    "hostPort": 80
+                    "hostPort": 8080
                 }
             ]
         }
