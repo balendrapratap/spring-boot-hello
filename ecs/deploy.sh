@@ -7,7 +7,7 @@ IMAGE_VERSION=latest
 TASK_FAMILY="aws-task-latest"
 
 # Create a new task definition for this build
-
+aws configure list
 
 aws ecs register-task-definition --region ${REGION} --family aws-task-latest --cli-input-json file://ecs/aws-task-latest.json
 
