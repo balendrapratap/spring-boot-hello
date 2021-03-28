@@ -6,13 +6,6 @@ CLUSTER=aws-ecs-cluster
 IMAGE_VERSION=latest
 TASK_FAMILY="aws-task-latest"
 
-# Create a cluster
-if [[ "$CLUSTER" == "aws-ecs-cluster" ]]; then
-  echo "cluster exist"
-else
-  aws ecs create-cluster --cluster-name $CLUSTER --region ${REGION}
-fi
-
 # Create a new task definition for this build
 aws configure list
 
