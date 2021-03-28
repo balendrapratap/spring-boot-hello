@@ -9,7 +9,7 @@ TASK_FAMILY="aws-task-latest"
 # Create a new task definition for this build
 
 
-aws ecs register-task-definition --family aws-task-latest --cli-input-json file://aws-task-latest.json
+aws ecs register-task-definition --family aws-task-latest --cli-input-json file://ecs/aws-task-latest.json
 
 # Update the service with the new task definition and desired count
 REVISION=`aws ecs describe-task-definition --task-definition aws-task-latest | egrep "revision" | tr "/" " " | awk '{print $2}' | sed 's/"$//'`
