@@ -5,7 +5,7 @@
 
     <groupId>org.springframework</groupId>
     <artifactId>gs-spring-boot</artifactId>
-    <version>1.2.10</version>
+    <version>1.2.20</version>
     
     <parent>
         <groupId>org.springframework.boot</groupId>
